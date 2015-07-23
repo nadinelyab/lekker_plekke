@@ -6,6 +6,38 @@
 
 <p>Description: <%= @place.description %></p>
 
+<h2>Comments</h2>
+<% @place.comments.each do |comment| %>
+	<p>
+		<strong>Commenter:</strong>
+		<%= comment.commenter %>
+	</p>
+
+	<p>
+		<strong>Text:</strong>
+		<%= comment.text %>
+	</p>
+<% end %>
+
+<h2>Add a comment</h2>
+
+<%= form_for ([@place, @place.comments.build]) do |f| %>
+	<p>
+		<%= f.label :commenter %><br>
+		<%= f.text_field :commenter %>
+	</p>
+	<p>
+		<%= f.label :text %><br>
+		<%= f.text_field :text %>
+	</p>
+	<p>
+		<%= f.submit %><br>
+	</p>
+<% end %>
+
 <p><%= link_to "Place List", places_path %></p>
  
 <p><%= link_to "Edit", edit_place_path(@place) %></p>
+
+
+
