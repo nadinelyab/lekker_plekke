@@ -25,4 +25,4 @@ Comment.delete_all
 puts "Creating comments..."
 
 Comment.create! commenter: "Johnny Brown", text: "Loved this place too!",
-place: place
+likes: 0, place: place

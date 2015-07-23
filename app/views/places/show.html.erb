@@ -12,10 +12,16 @@
 		<strong>Commenter:</strong>
 		<%= comment.commenter %>
 	</p>
-
 	<p>
 		<strong>Text:</strong>
 		<%= comment.text %>
+	</p>
+	<p>
+		<strong>Likes:</strong>
+		<%= comment.likes %>
+	</p>
+	<p>
+		<%= link_to "Like", '/places/comments/', id: comment.id %>
 	</p>
 <% end %>
 

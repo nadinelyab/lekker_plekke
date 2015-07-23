@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :places do
     resources :comments
   end
+
+  get '/places/comments/:id' => 'comments#like'
+
   root "places#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
