@@ -1,0 +1,11 @@
+<h1><%= @place.name%> page</h1>
+
+<h2><%= @place.location%></h2>
+
+<p>Rating: <%= @place.rating %></p>
+
+<p>Description: <%= @place.description %></p>
+
+<p><%= link_to "Place List", places_path %></p>
+ 
+<p><%= link_to "Edit", edit_place_path(@place) %></p>
